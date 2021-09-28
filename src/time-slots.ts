@@ -183,7 +183,7 @@ function _getAvailableTimeSlotsForShift(
 	return timeSlots
 }
 
-function _getMinTimeWindowNeeded(configuration :TimeSlotsFinderConfiguration) {
+function _getMinTimeWindowNeeded(configuration: TimeSlotsFinderConfiguration) {
 	return (
 		(configuration.minAvailableTimeBeforeSlot ?? 0)
 		+ configuration.timeSlotDuration
@@ -253,5 +253,5 @@ function _nextSearchMoment(moment: Dayjs, configuration: TimeSlotsFinderConfigur
 	const minuteToAdd = (
 		slotStartMinuteStep - (slotStartAt.minute() % slotStartMinuteStep)
 	) % slotStartMinuteStep
-	return nextMoment.add(minuteToAdd, "minute").millisecond(0)
+	return nextMoment.add(minuteToAdd, "minute").utc().millisecond(0)
 }

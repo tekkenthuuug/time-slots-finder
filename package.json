@@ -1,5 +1,5 @@
 {
-  "name": "time-slots-finder",
+  "name": "@wizyter/time-slots-finder",
   "version": "0.5.2",
   "description": "A module to extract available time slots from a calendar.",
   "main": "lib/index.js",
